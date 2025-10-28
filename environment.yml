@@ -1,21 +1,40 @@
-name: vla0-env
+name: VLA-0
 channels:
   - pytorch
-  - defaults
+  - nvidia/label/cuda-12.4.0
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
-  - pytorch=2.1
-  - torchvision=0.16
+  - pytorch=2.1.*
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+  - cudatoolkit
+  - numpy
+  - pillow
   - pip
+  - tqdm
+  - pyyaml
+  - matplotlib
+  - pandas
+  - cython
+  - accelerate
+  - git
+  - cmake
+  - ninja
+  - openmpi  # 一般没用到，但在某些torch.distributed后端下会有依赖；保留没坏处
   - pip:
-      - transformers==4.35.2
-      - accelerate==0.24.1
-      - qwen-vl-utils==0.0.8
-      - datasets==2.14.6
-      - opencv-python==4.8.1.78
-      - numpy==1.24.3
-      - h5py
-      - gym==0.26.2
-      - libero==0.2.0
-      - matplotlib
+      - transformers>=4.43.0
+      - qwen-vl-utils
+      - opencv-python
+      - einops
+      - sentencepiece
+      - safetensors
+      - datasets
+      - huggingface_hub
+      - gymnasium
+      - mujoco
+      - imageio
+      - imageio-ffmpeg
+      - pyquaternion
