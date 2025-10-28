@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter/IPython checkpoints (如果以后有notebook也会忽略)
+.ipynb_checkpoints/
+
+# Large generated data / processed training data
+Data/processed_vla0/
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.pkl
+*.jsonl
+*.png
+*.jpg
+*.jpeg
+*.mp4
+
+# Checkpoints and model weights
+ckpts/
+*.pt
+*.bin
+*.safetensors
+
+# Accelerate / Trainer states, temp outputs
+**/accelerate_state*
+*.log
+*.tmp
+*.tar
+*.tar.gz
+
+# OS metadata (macOS)
+.DS_Store
+
